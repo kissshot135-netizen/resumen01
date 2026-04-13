@@ -1,0 +1,311 @@
+/* 
+COMENTARIO TÉCNICO GENERAL DEL CSS:
+
+Este CSS define el diseño visual y la estructura de una página web utilizando principalmente técnicas modernas como Flexbox, Grid, transiciones y sombras para mejorar la experiencia de usuario.
+
+1. DISPLAY: FLEX (Flexbox)
+Se utiliza en la clase .contenido-principal y en el nav.
+Flexbox permite organizar elementos en una sola dimensión (fila o columna) de forma flexible.
+
+Ejemplo en este código:
+.contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+- display: flex → activa el modelo flexbox.
+- flex-wrap: wrap → permite que los elementos bajen a otra línea si no caben.
+- gap → separa los elementos sin necesidad de márgenes.
+
+Ejemplo de uso:
+Un layout típico sería dividir contenido principal y sidebar:
+main { flex: 3; }
+#curiosidades { flex: 1; }
+Esto crea una proporción donde main ocupa 3 veces más espacio que la barra lateral.
+
+También en nav:
+nav {
+    display: flex;
+    justify-content: center;
+}
+- justify-content: center → centra los enlaces horizontalmente.
+
+2. DISPLAY: GRID
+Se usa en .grid-aldeas:
+
+.grid-aldeas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+Grid permite trabajar en dos dimensiones (filas y columnas).
+
+- repeat(auto-fit, minmax(250px, 1fr)) →
+  crea columnas automáticas que se adaptan al tamaño de la pantalla.
+  Cada tarjeta tendrá mínimo 250px y máximo 1fr (fracción del espacio disponible).
+
+Ejemplo:
+En una pantalla grande se verán varias columnas.
+En móvil se reorganizan en una sola columna automáticamente.
+
+3. TRANSFORM Y TRANSITION
+Se usan para efectos visuales suaves:
+
+#curiosidades:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+- transform: translateY(-5px) → mueve el elemento hacia arriba.
+- transition → suaviza el cambio en 0.3s.
+
+Ejemplo:
+Cuando el usuario pasa el mouse, la tarjeta “flota”.
+
+4. SOMBRAS (box-shadow)
+Se usan para dar profundidad:
+
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+- Primer valor: desplazamiento horizontal
+- Segundo: vertical
+- Tercero: desenfoque
+- Color: sombra semitransparente
+
+Ejemplo:
+Elementos como tarjetas o header parecen elevados sobre el fondo.
+
+5. BORDER-RADIUS
+Se usa para esquinas redondeadas:
+border-radius: 10px;
+
+Esto suaviza la interfaz y la hace más moderna.
+
+6. OBJECT-FIT
+En imágenes:
+object-fit: cover;
+
+Esto hace que la imagen:
+- Mantenga proporción
+- Cubra el contenedor sin deformarse
+- Recorte partes si es necesario
+
+7. TRANSICIONES EN BOTONES Y LINKS
+a {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-3px);
+}
+
+Esto crea una interacción más dinámica al pasar el mouse.
+
+8. FLEX Y GRID COMBINADOS
+Este CSS combina Flexbox (layout general) y Grid (tarjetas), lo cual es una práctica moderna:
+- Flexbox → estructura general de página
+- Grid → distribución de elementos tipo “cards”
+
+9. FORMULARIOS (#suscripcion)
+Inputs con:
+width: 100%;
+box-sizing: border-box;
+
+Esto asegura que los campos ocupen todo el ancho sin romper el diseño.
+
+Botones con hover:
+cambio de color para feedback visual del usuario.
+
+CONCLUSIÓN:
+Este CSS utiliza técnicas modernas de diseño responsivo (Flexbox + Grid), junto con efectos visuales (transitions, shadows, transforms) para crear una interfaz adaptable, interactiva y visualmente atractiva en distintos dispositivos.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contenido-principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+header {
+    background: linear-gradient(90deg, rgb(192, 112, 21), rgb(150, 85, 15));
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+main {
+    flex: 3;
+    padding: 10px;
+}
+
+#curiosidades {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    height: fit-content;
+}
+
+#curiosidades p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#curiosidades:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    text-decoration: none;
+    background-color: rgb(192, 112, 21);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: rgb(150, 85, 15);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+a:active {
+    transform: scale(0.95);
+}
+
+#Nuestros_servicios {
+    display: block;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#Nuestros_servicios article {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#Nuestros_servicios article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#Nuestros_servicios img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#Nuestros_servicios article h3 {
+    margin: 10px;
+    color: #c07015;
+}
+
+#Nuestros_servicios article h4,
+#Nuestros_servicios article p {
+    margin: 10px;
+    font-size: 14px;
+}
+
+#suscripcion article {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#suscripcion h3 {
+    text-align: center;
+    color: #c07015;
+    margin-bottom: 15px;
+}
+
+#suscripcion input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#suscripcion input[type="radio"],
+#suscripcion input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+#suscripcion button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(192, 112, 21);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#suscripcion button:hover {
+    background-color: rgb(150, 85, 15);
+}
+
+#suscripcion label {
+    font-weight: bold;
+    font-size: 14px;
+}

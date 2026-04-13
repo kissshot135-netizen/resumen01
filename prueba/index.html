@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Naruto - Naruto Shippuden</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Naruto - Naruto Shippuden</h1>
+        </header>
+        <hr>
+        <nav>
+            <a href="#naruto">Naruto</a>
+            <a href="#naruto_shippuden">Naruto Shippuden</a>
+            <a href="#aldeas_ninja">Aldeas Ninja</a>
+            <a href="#suscripcion">Suscripción</a>
+            <a href="https://vernaruto.tv" target="_blank">Ver Naruto</a>
+        </nav>
+        <hr>
+        <div class="contenido-principal">
+            <main>
+                <section id="naruto">
+                    <h2>Naruto</h2>
+                    <p>La historia comienza con Naruto Uzumaki, un joven ninja que tiene sellado en su interior al Zorro de Nueve Colas. Debido a esto, es marginado por los habitantes de la Aldea Oculta de la Hoja.</p>
+                    <p>Acompañado por Sasuke Uchiha y Sakura Haruno en el Equipo 7, Naruto emprende diversas misiones mientras sueña con convertirse en Hokage para ganarse el respeto de todos.</p>
+                </section>
+                <section id="naruto_shippuden">
+                    <h2>Naruto Shippuden</h2>
+                    <p>Tras dos años y medio de entrenamiento con Jiraiya, Naruto regresa a la aldea más fuerte y maduro. Esta etapa se centra en el enfrentamiento contra la organización criminal Akatsuki, que busca capturar a todos los Jinchuriki.</p>
+                    <p>La trama escala hacia conflictos globales, revelando secretos sobre el pasado de los clanes y culminando en la Cuarta Gran Guerra Ninja.</p>
+                </section>
+                <section id="aldeas_ninja">
+                    <h2>Aldeas Ninja</h2>
+                    <div class="grid-aldeas">
+                        <article>
+                            <h3>Konoha</h3>
+                            <img src="img/konoha.jpg" alt="konoha">
+                            <h4>Descripción de la aldea:</h4>
+                            <p>Es la Aldea Oculta de la Hoja, ubicada en el País del Fuego.<br> Fundada por los clanes Senju y Uchiha, es conocida por su "Voluntad de Fuego", una filosofía que promueve el amor y la protección de todos los habitantes como si fueran una gran familia.</p>
+                            <h4>Séptimo Hokage</h4>
+                            <p>Naruto Uzumaki</p>
+                        </article>
+                        <article>
+                            <h3>Sunagakure</h3>
+                            <img src="img/Sunagakure.jpg" alt="sunagakure">
+                            <h4>Descripción de la aldea</h4>
+                            <p>Es la Aldea Oculta de la Arena, situada en el País del Viento.<br> Sus ninjas se especializan en el uso de marionetas, jutsus de viento y el control de la arena, aprovechando el desierto como una defensa natural.</p>
+                            <h4>Quinto Kazekage</h4>
+                            <p>Gaara del Desierto</p>
+                        </article>
+                        <article>
+                            <h3>Kirigakure</h3>
+                            <img src="img/kirigakure.jpg" alt="kirigakure">
+                            <h4>Descripción de la aldea</h4>
+                            <p>Es la Aldea Oculta de la Niebla, localizada en el País del Agua.<br> Conocida históricamente como la "Niebla con Sangre", es el hogar de expertos en jutsus de agua y de los famosos Siete Espadachines de la Niebla.</p>
+                            <h4>Sexto Mizukage</h4>
+                            <p>Chojuro</p>
+                        </article>
+                        <article>
+                            <h3>Kumogakure</h3>
+                            <img src="img/kumogakure.jpg" alt="kumogakure">
+                            <h4>Descripción de la aldea</h4>
+                            <p>Es la Aldea Oculta de las Nubes, ubicada en el País del Rayo.<br> Se encuentra situada sobre altas montañas y destaca por su enorme poder militar, el dominio de técnicas de rayo y la habilidad en el uso de la esgrima.</p>
+                            <h4>Quinto Raikage</h4>
+                            <p>Darui</p>
+                        </article>
+                        <article>
+                            <h3>Iwagakure</h3>
+                            <img src="img/iwagakure.jpg" alt="iwagakure">
+                            <h4>Descripción de la aldea</h4>
+                            <p>Es la Aldea Oculta de las Rocas, situada en el País de la Tierra.<br> Sus ninjas son famosos por su inquebrantable disciplina y su maestría en el uso de jutsus de tierra, utilizando el terreno rocoso como una fortaleza natural.</p>
+                            <h4>Cuarta Mizukage</h4>
+                            <p>Kurotsushi</p>
+                        </article>
+                    </div>
+                </section>
+                <hr>
+                <section id="suscripcion">
+                    <article>
+                        <h3>Formulario de Suscripción</h3>
+                        <form>
+                            <label for="nombre_usuario">Nombre:</label>
+                            <input type="text" id="nombre_usuario" placeholder="Juan Pérez">
+                            <br>
+                            <label for="correo_usuario">Correo Electrónico:</label>
+                            <input type="email" id="correo_usuario" placeholder="juan@gmail.com">
+                            <br>
+                            <label for="nacimiento_usuario">Fecha de Nacimiento:</label>
+                            <input type="date" id="nacimiento_usuario">
+                            <br>
+                            <p>¿Cuál es tu rango ninja actual?</p>
+                            <input type="radio" id="genin" name="rango" value="genin">
+                            <label for="genin">Genin</label>
+                            <input type="radio" id="chunin" name="rango" value="chunin">
+                            <label for="chunin">Chunin</label>
+                            <input type="radio" id="jounin" name="rango" value="jounin">
+                            <label for="jounin">Jounin</label>
+                            <br>
+                            <label for="terminos_uso">Terminos de uso</label>
+                            <input type="checkbox" id="terminos_uso">
+                            <br>
+                            <button type="submit">Enviar</button>
+                        </form>
+                    </article>
+                </section>
+            </main>
+
+            <aside id="curiosidades">
+                <p>El nombre "Naruto" proviene de un ingrediente del ramen (un pastel de pescado con espiral rosa).</p>
+                <p>El autor, Masashi Kishimoto, se inspiró en su propia infancia en una zona rural para crear los paisajes de las aldeas.</p>
+                <p>Originalmente, Kishimoto planeó que Naruto fuera un zorro disfrazado de humano, no un humano con un zorro dentro.</p>
+            </aside>
+        </div>
+        <footer>
+            <p>Todos los derechos reservados</p>
+        </footer>
+    </body>
+</html>
